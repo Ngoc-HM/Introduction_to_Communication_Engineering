@@ -1,0 +1,131 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage[left=3.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry} 
+\setlength{\parindent}{0pt}
+\usepackage{graphicx} 
+%\usepackage[firstpage]{draftwatermark} 
+\usepackage{xcolor}
+\usepackage{tikz} 
+\usepackage{scrextend}
+\changefontsizes{14pt}
+%\usepackage{background}
+\usetikzlibrary{calc}
+\usepackage{listings}
+\usepackage{pdfpages}
+
+%\backgroundsetup{scale = 1, angle = 0, opacity = 0.2,
+%contents = {\includegraphics[width = 0.9\paperwidth,
+%height = 0.9\paperheight, keepaspectratio] {hust.png}}}
+
+%\backgroundsetup{scale = 1, angle = 0, opacity = 0.2,
+%contents = {\includegraphics[width = 0.97\paperwidth,
+%height = 0.97\paperheight, keepaspectratio] {bia.png}}}
+\begin{document}
+\begin{titlepage}
+    %\SetWatermarkText{\includegraphics[width = 0.97\paperwidth,
+    %height = 0.97\paperheight]{bia.png}}
+    %\SetWatermarkAngle{0} 
+    %\SetWatermarkText{\includegraphics[scale=1]{hust.png}}
+    %\SetWatermarkAngle{0} 
+    \begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+        \draw[blue!70!black,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+
+        \draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+        ([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+
+
+        \draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+        ([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+    \end{tikzpicture}
+    \begin{center}
+        \vspace{7pt}
+
+        \textbf{ĐẠI HỌC BÁCH KHOA HÀ NỘI}
+
+        \vspace{7pt}
+        {\fontsize{13pt}{9.6pt}\selectfont\textbf{TRƯỜNG CÔNG NGHỆ THÔNG TIN \& TRUYỀN THÔNG}}
+    \end{center}
+    \vspace{10pt}
+    \begin{center}
+        \includegraphics[scale=0.4]{HUST_SOICT.png}
+
+        \vspace{30pt}
+        \fontsize{18pt}{17pt}\selectfont
+        \textbf{BÁO CÁO}
+
+        \vspace{7pt}
+        \textbf{ Mini-Project}
+    \end{center}
+    \begin{flushleft}
+        \fontsize{14pt}{17pt}\selectfont
+        \textbf{\textsl{ĐỀ TÀI}}
+        \vspace{7pt}
+    \end{flushleft}
+    \begin{center}
+        \fontsize{18pt}{17pt}\selectfont
+        \textbf{INTRODUCTION TO }
+
+        \vspace{7pt}
+        \textbf{COMMUNICATION ENGINEERING}
+    \end{center}
+
+    \vspace{15pt}
+    \textbf{Giảng viên hướng dẫn: PhD. Trịnh Văn Chiến}
+
+    \vspace{10pt}
+    \textbf{Nhóm sinh viên thực hiện:}
+
+    \begin{tabbing}
+        \hspace{8cm}\=\hspace{3cm}\=\hspace{3cm} \kill
+        {\it \textbf{Họ và tên}}\>{\it \textbf{MSSV}}\>{\it \textbf{Mã lớp}}\\
+         \begin{bfseries}Phan Trung Dũng (1)\end{bfseries}\> \begin{bfseries}20205073\end{bfseries}\> \begin{bfseries}135279\end{bfseries}\\
+        \begin{bfseries}Hoàng Minh Ngọc (2)\end{bfseries}\> \begin{bfseries}20200440\end{bfseries}\> \begin{bfseries}135279\end{bfseries}\\
+        \begin{bfseries}Hoàng Vân Trường (3)\end{bfseries}\> \begin{bfseries}20205134\end{bfseries}\> \begin{bfseries}135279\end{bfseries}\\
+    \end{tabbing}
+    \vspace{10pt}
+    \begin{center}
+        \textbf{Hà Nội, 2023}
+    \end{center}
+\end{titlepage}
+\newpage
+\begin{center}
+    \fontsize{30pt}{17pt}\selectfont
+        \textbf{Mục Lục}
+\end{center}
+\renewcommand\contentsname{}
+\tableofcontents
+\newpage
+\includepdf[pages=-]{MiniProject.pdf}
+\newpage
+\begin{center}
+    \fontsize{30pt}{17pt}\selectfont
+        \textbf{Lời cảm ơn}
+\end{center}
+Sau khi đào sâu tìm hiểu, cũng như tự hệ thống lại kiến thức để có thể thực hiện
+Mini Project này, em tự thấy bản thân đã học học được thêm rất nhiều kiến thức
+mới, hiểu kỹ và sâu sắc hơn những công thức trên lý thuyết được học.
+Em cũng rất mong thời gian tới sẽ có cơ hội được tiếp xúc, thực hành nhiều hơn
+với các hệ thống truyền thông để chúng em có thể hiểu được áp dụng triệt để những
+lý thuyết đã học ở trường.
+\\
+em xin trân thành cảm ơn thầy Trịnh Văn Chiến đã cho chúng em được làm bài, hệ thống lại kiến thức vô cùng bổ ích của môn học Kỹ Thuyết Truyền Thông, bọn em thấy bài học khá là hay và thú vị, rất là ý nghĩa trong chương trình học của bọn em, em mong muốn có thể gặp thầy trong những bài học, học phần hấp dẫn tới. \\
+chúng em xin chân thành cảm ơn.
+\newpage
+\input{Bai1.tex}
+\newpage
+\input{Bai2.tex}
+\newpage
+\input{Bai3.tex}
+\newpage
+\section{Trích Nguồn}
+1)  Tạ Hải Tùng, Slide Nhập môn Kỹ thuật Truyền thông. 2018. \\
+2)  Mau-Chung Frank Chang’s Lab, "Analysis of Noncoherent ASK ModulationBased RF-Interconnect for Memory Interface" in IEEE Journal on Emerging and Selected Topics in Circuits and Systems.  \\
+3) "Digital Communications: Fundamentals and Applications" của Bernard Sklar \\ 
+4) "Introduction to Digital Communication" của Rodger E. Ziemer và Roger L. Peterson \\ 
+5) "Principles of Digital Communication" của Robert G. Gallager \\ 
+6) "Digital Communication" của Simon Haykin \\
+7) "Communication Systems Engineering" của John G. Proakis và Masoud Salehi \\ 
+3) 
+\end{document}
+\end{document}
